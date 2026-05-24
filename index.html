@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Michael Krasa's personal software engineering portfolio: selected projects, work history, resume, and contact links."
+    />
+    <meta name="theme-color" content="#f5f2e8" />
+    <meta property="og:title" content="Michael Krasa | software engineer" />
+    <meta
+      property="og:description"
+      content="Selected software projects, work history, resume, and contact links."
+    />
+    <meta property="og:type" content="website" />
+    <title>Michael Krasa | software engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;520;620;720;820;900&family=IBM+Plex+Mono:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="Michael Krasa home">MK</a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#projects">Projects</a>
+        <a href="#impact">Notes</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="header-link" href="assets/Michael_Krasa_resume.pdf">Resume</a>
+    </header>
+
+    <main id="top">
+      <section class="hero section-shell" aria-labelledby="intro-title">
+        <div class="hero-copy">
+          <p class="eyebrow">San Francisco / Backend Systems / Oracle Cloud</p>
+          <h1 id="intro-title">Michael Krasa</h1>
+          <p class="lede">
+            I am a software engineer at Oracle Cloud. Most of my work sits around backend systems,
+            telemetry, data pipelines, and reliability. Outside work, I build small, practical
+            projects around energy automation, robot telemetry, ML infrastructure, and graphics.
+          </p>
+          <div class="hero-actions" aria-label="Important links">
+            <a class="button primary" href="#projects">Projects</a>
+            <a class="button" href="https://github.com/michaelkrasa">GitHub</a>
+            <a class="button" href="https://www.linkedin.com/in/michaelkrasa/">LinkedIn</a>
+          </div>
+        </div>
+
+        <aside class="hero-panel profile-card" aria-label="Profile summary">
+          <img src="assets/github-avatar.jpeg" alt="Michael Krasa" />
+          <div class="panel-label">Quick read</div>
+          <dl class="profile-facts">
+            <div>
+              <dt>Current</dt>
+              <dd>Software Engineer 3 at Oracle</dd>
+            </div>
+            <div>
+              <dt>What I like</dt>
+              <dd>Systems with clear data flow, good operational feedback, and boring failure modes</dd>
+            </div>
+            <div>
+              <dt>Stack</dt>
+              <dd>Java, Python, Go, C++, Kafka, FastAPI, gRPC, Kubernetes</dd>
+            </div>
+          </dl>
+        </aside>
+      </section>
+
+      <section class="impact-strip" id="impact" aria-labelledby="impact-title">
+        <div class="section-kicker">Work notes</div>
+        <h2 id="impact-title" class="visually-hidden">Work notes</h2>
+        <div class="impact-grid">
+          <article>
+            <strong>30%</strong>
+            <span>Higher sustained throughput after re-architecting a multi-region data platform</span>
+          </article>
+          <article>
+            <strong>25%</strong>
+            <span>Compute cost reduction through concurrency, load balancing, and failure handling work</span>
+          </article>
+          <article>
+            <strong>200k+</strong>
+            <span>Agents covered by lightweight telemetry that shaped product and platform decisions</span>
+          </article>
+          <article>
+            <strong>60+ hrs</strong>
+            <span>Of build time saved weekly by fixing a critical shared CI/CD flaw</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell projects-section" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Projects</p>
+            <h2 id="projects-title">Selected projects.</h2>
+          </div>
+          <p>
+            A short index of public work. Use the filters to jump by domain, or open the repo from
+            any card.
+          </p>
+        </div>
+
+        <div class="project-tools" aria-label="Project controls">
+          <label class="search-box">
+            <span class="visually-hidden">Search projects</span>
+            <input id="project-search" type="search" placeholder="Search projects" autocomplete="off" />
+          </label>
+          <div class="filter-list" id="project-filters" aria-label="Filter projects"></div>
+        </div>
+
+        <div class="project-count" id="project-count" aria-live="polite"></div>
+        <div class="project-grid" id="project-grid"></div>
+      </section>
+
+      <section class="section-shell experience-section" id="experience" aria-labelledby="experience-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Experience</p>
+            <h2 id="experience-title">Experience.</h2>
+          </div>
+          <p>
+            I have mostly worked on backend services and data systems: ingestion, validation,
+            aggregation, deployment reliability, and the operational details that make software
+            easier to run.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <article>
+            <span class="date">2023 - present</span>
+            <div>
+              <h3>Software Engineer 3, Oracle</h3>
+              <p>
+                Owned and re-architected multi-region distributed data systems, simplified
+                onboarding flows, and deployed telemetry across a large agent fleet.
+              </p>
+            </div>
+          </article>
+          <article>
+            <span class="date">2021 - 2023</span>
+            <div>
+              <h3>Software Engineer 2, Oracle</h3>
+              <p>
+                Built Java microservices and distributed data pipelines for high-volume telemetry
+                ingestion, processing, validation, and analytics workflows.
+              </p>
+            </div>
+          </article>
+          <article>
+            <span class="date">2020 - 2021</span>
+            <div>
+              <h3>Software Engineer, Trisbee</h3>
+              <p>
+                Improved reliability in core transaction pipelines, modernized older codebases,
+                and expanded testing coverage across production-critical flows.
+              </p>
+            </div>
+          </article>
+          <article>
+            <span class="date">2021 - 2021</span>
+            <div>
+              <h3>Software Engineer, Amdocs</h3>
+              <p>
+                Contributed backend features and internal API integrations for an enterprise
+                financial services platform, with a focus on account setup, onboarding, and rollout
+                reliability.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell contact-section" id="contact" aria-labelledby="contact-title">
+        <p class="section-kicker">Contact</p>
+        <h2 id="contact-title">Links and contact.</h2>
+        <div class="contact-grid">
+          <a href="mailto:michael.krasa@gmail.com">michael.krasa@gmail.com</a>
+          <a href="https://github.com/michaelkrasa">github.com/michaelkrasa</a>
+          <a href="https://www.linkedin.com/in/michaelkrasa/">linkedin.com/in/michaelkrasa</a>
+          <a href="assets/Michael_Krasa_resume.pdf">Download resume</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>Michael Krasa</span>
+      <span>Distributed systems / Telemetry / Automation</span>
+    </footer>
+
+    <script src="main.js" defer></script>
+  </body>
+</html>
