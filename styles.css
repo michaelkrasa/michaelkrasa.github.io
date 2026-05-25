@@ -152,9 +152,17 @@ p {
 h1 {
   max-width: 880px;
   margin-bottom: 22px;
-  font-size: clamp(64px, 10vw, 132px);
+  font-size: clamp(61px, 9.5vw, 125px);
   line-height: 0.86;
   letter-spacing: 0;
+}
+
+h1 span {
+  display: block;
+}
+
+h1 .last-name {
+  margin-left: 0.11em;
 }
 
 h2 {
@@ -213,7 +221,6 @@ h3 {
   aspect-ratio: 1;
   object-fit: cover;
   border-bottom: 2px solid var(--line);
-  filter: grayscale(100%) contrast(1.08);
 }
 
 .panel-label {
@@ -573,7 +580,11 @@ footer {
   }
 
   h1 {
-    font-size: clamp(44px, 15vw, 76px);
+    font-size: clamp(42px, 14.25vw, 72px);
+  }
+
+  h1 .last-name {
+    margin-left: 0.08em;
   }
 
   .impact-grid,
