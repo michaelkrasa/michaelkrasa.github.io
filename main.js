@@ -1,10 +1,37 @@
 const projects = [
   {
+    name: "boileroom",
+    type: "Open-source contributor",
+    domain: "ml",
+    language: "Python",
+    featured: true,
+    description:
+      "Contributor to a Python package that provides a unified interface for protein prediction models across Modal serverless GPUs and Apptainer-based local or HPC execution.",
+    tags: ["protein prediction", "modal", "apptainer", "hpc", "open source"],
+    links: [
+      ["GitHub", "https://github.com/softnanolab/boileroom"],
+      ["PyPI", "https://pypi.org/project/boileroom/"],
+    ],
+  },
+  {
+    name: "vismatch",
+    type: "Computer vision",
+    domain: "ml",
+    language: "Python",
+    featured: true,
+    description:
+      "Wrapper around 50+ image matching models with a unified interface, created for easier experimentation and comparison.",
+    tags: ["computer vision", "image matching", "models"],
+    links: [
+      ["GitHub", "https://github.com/michaelkrasa/vismatch"],
+      ["Project site", "https://earthloc-and-earthmatch.github.io/"],
+    ],
+  },
+  {
     name: "fleet-forge",
     type: "Telemetry platform",
     domain: "systems",
     language: "Python",
-    featured: true,
     description:
       "Distributed robot fleet telemetry platform with gRPC ingest, Kafka streaming, validation, object storage, Postgres metadata, FastAPI query APIs, Prometheus metrics, dashboards, and load-test tooling.",
     tags: ["grpc", "kafka", "fastapi", "postgres", "prometheus"],
@@ -17,36 +44,11 @@ const projects = [
     type: "Energy optimizer",
     domain: "energy",
     language: "Python",
-    featured: true,
     description:
       "Battery charge and discharge optimizer for AlphaESS systems using Czech day-ahead electricity prices at 15-minute granularity to improve savings and grid efficiency.",
     tags: ["alphaess", "battery", "solar", "electricity prices", "optimization"],
     links: [
       ["GitHub", "https://github.com/michaelkrasa/alpha-ess-charging-optimizer"],
-    ],
-  },
-  {
-    name: "mini-ml-training-platform",
-    type: "ML infrastructure",
-    domain: "ml",
-    language: "Python",
-    description:
-      "Compact ML platform demo with reproducible PyTorch training, MLflow tracking and registry, FastAPI inference, and dataset-change retraining.",
-    tags: ["pytorch", "mlflow", "fastapi", "retraining"],
-    links: [
-      ["GitHub", "https://github.com/michaelkrasa/mini-ml-training-platform"],
-    ],
-  },
-  {
-    name: "aerostack",
-    type: "Simulation",
-    domain: "robotics",
-    language: "C++",
-    description:
-      "Modern C++20 simulator for drone swarm missions, path planning, collision avoidance, and telemetry.",
-    tags: ["c++20", "drones", "path planning", "telemetry"],
-    links: [
-      ["GitHub", "https://github.com/michaelkrasa/aerostack"],
     ],
   },
   {
@@ -87,16 +89,27 @@ const projects = [
     ],
   },
   {
-    name: "vismatch",
-    type: "Computer vision",
+    name: "mini-ml-training-platform",
+    type: "ML infrastructure",
     domain: "ml",
     language: "Python",
     description:
-      "Wrapper around 50+ image matching models with a unified interface, created for easier experimentation and comparison.",
-    tags: ["computer vision", "image matching", "models"],
+      "Compact ML platform demo with reproducible PyTorch training, MLflow tracking and registry, FastAPI inference, and dataset-change retraining.",
+    tags: ["pytorch", "mlflow", "fastapi", "retraining"],
     links: [
-      ["GitHub", "https://github.com/michaelkrasa/vismatch"],
-      ["Project site", "https://earthloc-and-earthmatch.github.io/"],
+      ["GitHub", "https://github.com/michaelkrasa/mini-ml-training-platform"],
+    ],
+  },
+  {
+    name: "aerostack",
+    type: "Simulation",
+    domain: "robotics",
+    language: "C++",
+    description:
+      "Modern C++20 simulator for drone swarm missions, path planning, collision avoidance, and telemetry.",
+    tags: ["c++20", "drones", "path planning", "telemetry"],
+    links: [
+      ["GitHub", "https://github.com/michaelkrasa/aerostack"],
     ],
   },
   {
