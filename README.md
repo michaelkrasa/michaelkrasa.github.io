@@ -1,6 +1,6 @@
-# michaelkrasa.github.io-style portfolio
+# Personal website
 
-Static portfolio site for GitHub Pages.
+Static personal website for GitHub Pages.
 
 ## local preview
 
@@ -12,4 +12,6 @@ python3 -m http.server 4173
 
 ## deployment
 
-The `.github/workflows/pages.yml` workflow deploys the repository root to GitHub Pages after pushes to `main`.
+GitHub Pages publishes the repository root from the `main` branch to:
+
+https://michaelkrasa.github.io/
