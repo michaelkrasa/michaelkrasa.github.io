@@ -1,10 +1,21 @@
 const projects = [
   {
+    name: "Bittensor decentralized AI inference",
+    type: "Private infrastructure",
+    domain: "ml",
+    language: "Python / CUDA",
+    featured: true,
+    description:
+      "Contributed as a top-ranked miner in Bittensor Subnet 19, a competitive decentralized image-generation and multimodal reasoning network. Built GPU-accelerated inference pipelines across multi-cloud and bare-metal clusters with an emphasis on latency, throughput, fault tolerance, and automated model rollout workflows.",
+    tags: ["bittensor", "gpu inference", "mlops", "distributed systems", "multi-cloud"],
+    links: [],
+  },
+  {
     name: "boileroom",
     type: "Open-source contributor",
     domain: "ml",
     language: "Python",
-    featured: true,
+    featured: false,
     description:
       "Contributor to a Python package that provides a unified interface for protein prediction models across Modal serverless GPUs and Apptainer-based local or HPC execution.",
     tags: ["protein prediction", "modal", "apptainer", "hpc", "open source"],
@@ -186,11 +197,15 @@ function renderProjects() {
               ${project.tags.map((tag) => `<span class="tag">${tag}</span>`).join("")}
             </div>
           </div>
-          <div class="project-links">
-            ${project.links
-              .map(([label, href]) => `<a class="project-link" href="${href}">${label}</a>`)
-              .join("")}
-          </div>
+          ${
+            project.links.length
+              ? `<div class="project-links">
+                  ${project.links
+                    .map(([label, href]) => `<a class="project-link" href="${href}">${label}</a>`)
+                    .join("")}
+                </div>`
+              : ""
+          }
         </article>
       `,
     )
