@@ -1,15 +1,4 @@
-const projects = [
-  {
-    name: "Bittensor decentralized AI inference",
-    type: "Private infrastructure",
-    domain: "ml",
-    language: "Python / CUDA",
-    featured: true,
-    description:
-      "Contributed as a top-ranked miner in Bittensor Subnet 19, a competitive decentralized image-generation and multimodal reasoning network. Built GPU-accelerated inference pipelines across multi-cloud and bare-metal clusters with an emphasis on latency, throughput, fault tolerance, and automated model rollout workflows.",
-    tags: ["bittensor", "gpu inference", "mlops", "distributed systems", "multi-cloud"],
-    links: [],
-  },
+const openSourceContributions = [
   {
     name: "boileroom",
     type: "Open-source contributor",
@@ -32,11 +21,25 @@ const projects = [
     featured: true,
     description:
       "Wrapper around 50+ image matching models with a unified interface, created for easier experimentation and comparison.",
-    tags: ["computer vision", "image matching", "models"],
+    tags: ["computer vision", "image matching", "models", "open source"],
     links: [
       ["GitHub", "https://github.com/michaelkrasa/vismatch"],
       ["Project site", "https://earthloc-and-earthmatch.github.io/"],
     ],
+  },
+];
+
+const projects = [
+  {
+    name: "Bittensor decentralized AI inference",
+    type: "Private infrastructure",
+    domain: "ml",
+    language: "Python / CUDA",
+    featured: true,
+    description:
+      "Contributed as a top-ranked miner in Bittensor Subnet 19, a competitive decentralized image-generation and multimodal reasoning network. Built GPU-accelerated inference pipelines across multi-cloud and bare-metal clusters with an emphasis on latency, throughput, fault tolerance, and automated model rollout workflows.",
+    tags: ["bittensor", "gpu inference", "mlops", "distributed systems", "multi-cloud"],
+    links: [],
   },
   {
     name: "fleet-forge",
@@ -149,6 +152,7 @@ let activeFilter = "all";
 let searchTerm = "";
 
 const projectGrid = document.querySelector("#project-grid");
+const openSourceGrid = document.querySelector("#open-source-grid");
 const projectCount = document.querySelector("#project-count");
 const filterList = document.querySelector("#project-filters");
 const searchInput = document.querySelector("#project-search");
@@ -178,38 +182,42 @@ function renderFilters() {
     .join("");
 }
 
+function projectCard(project) {
+  return `
+    <article class="project-card ${project.featured ? "is-featured" : ""}">
+      <div class="project-top">
+        <span class="project-type">${project.type}</span>
+        <span class="project-meta">${project.language}</span>
+      </div>
+      <div class="project-body">
+        <h3>${project.name}</h3>
+        <p>${project.description}</p>
+        <div class="tag-list" aria-label="${project.name} tags">
+          ${project.tags.map((tag) => `<span class="tag">${tag}</span>`).join("")}
+        </div>
+      </div>
+      ${
+        project.links.length
+          ? `<div class="project-links">
+              ${project.links
+                .map(([label, href]) => `<a class="project-link" href="${href}">${label}</a>`)
+                .join("")}
+            </div>`
+          : ""
+      }
+    </article>
+  `;
+}
+
+function renderOpenSourceContributions() {
+  openSourceGrid.innerHTML = openSourceContributions.map(projectCard).join("");
+}
+
 function renderProjects() {
   const visibleProjects = projects.filter(projectMatches);
   projectCount.textContent = `${visibleProjects.length} project${visibleProjects.length === 1 ? "" : "s"} shown`;
 
-  projectGrid.innerHTML = visibleProjects
-    .map(
-      (project) => `
-        <article class="project-card ${project.featured ? "is-featured" : ""}">
-          <div class="project-top">
-            <span class="project-type">${project.type}</span>
-            <span class="project-meta">${project.language}</span>
-          </div>
-          <div class="project-body">
-            <h3>${project.name}</h3>
-            <p>${project.description}</p>
-            <div class="tag-list" aria-label="${project.name} tags">
-              ${project.tags.map((tag) => `<span class="tag">${tag}</span>`).join("")}
-            </div>
-          </div>
-          ${
-            project.links.length
-              ? `<div class="project-links">
-                  ${project.links
-                    .map(([label, href]) => `<a class="project-link" href="${href}">${label}</a>`)
-                    .join("")}
-                </div>`
-              : ""
-          }
-        </article>
-      `,
-    )
-    .join("");
+  projectGrid.innerHTML = visibleProjects.map(projectCard).join("");
 }
 
 filterList.addEventListener("click", (event) => {
@@ -225,5 +233,6 @@ searchInput.addEventListener("input", (event) => {
   renderProjects();
 });
 
+renderOpenSourceContributions();
 renderFilters();
 renderProjects();

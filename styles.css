@@ -379,6 +379,10 @@ h3 {
   gap: 16px;
 }
 
+.open-source-grid {
+  margin-bottom: 58px;
+}
+
 .project-card {
   display: flex;
   min-height: 320px;
