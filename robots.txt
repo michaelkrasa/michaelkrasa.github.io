@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://michaelkrasa.github.io/sitemap.xml
+Sitemap: https://michaelkrasa.com/sitemap.xml

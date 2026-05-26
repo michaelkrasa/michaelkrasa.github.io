@@ -14,4 +14,4 @@ python3 -m http.server 4173
 
 GitHub Pages publishes the repository root from the `main` branch to:
 
-https://michaelkrasa.github.io/
+https://michaelkrasa.com/
